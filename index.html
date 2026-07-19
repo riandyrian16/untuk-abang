@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Graduation! - JKT48 Theme</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Music (Audio) -->
+  <!-- Ganti URL src dengan lagu JKT48 favoritmu (contoh: Pesawat Kertas 365 Hari atau Green Flash) -->
+  <audio id="bgm" loop>
+    <source src="BIRTH.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Floating Music Button -->
+  <button id="musicBtn" class="btn btn-jkt-danger rounded-circle shadow" onclick="toggleMusic()">
+    <i id="musicIcon" class="bi bi-music-note-beamed"></i>
+  </button>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-center d-flex align-items-center justify-content-center text-white position-relative">
+    <div class="canvas-confection" id="confetti-wrapper"></div>
+    <div class="container position-relative z-3">
+      <div class="badge bg-light text-dark fw-bold mb-3 px-3 py-2 rounded-pill tracking-widest text-uppercase">
+        <i class="bi bi-mortarboard-fill me-2 text-danger"></i> Official Graduation Celebration
+      </div>
+      <!-- Ganti NAMA WISUDAWAN di sini -->
+      <h1 class="display-2 fw-extrabold text-shadow text-uppercase font-oswald mb-2">
+        Happy Graduation,<br><span class="text-jkt-gold">DINA AYU APRILIA</span>!
+      </h1>
+      <p class="lead tracking-wide mb-4 text-light-50 fs-4">"Tetap berlari menuju mimpi-mimpimu, seperti jejak langkah JKT48 New Era!"</p>
+      <a href="#ucapan-section" class="btn btn-jkt-lg px-5 py-3 fw-bold rounded-pill text-uppercase">
+        Lihat Ucapan Member <i class="bi bi-arrow-down-circle-fill ms-2"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Oshi / Member Celebration Grid -->
+  <section id="ucapan-section" class="py-5 bg-jkt-dark text-white">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold font-oswald text-uppercase text-jkt-gradient">Pesan Semangat Dari Member</h2>
+        <div class="title-line mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Member 1 (Aralie) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-member border-0 h-100 shadow">
+            <div class="member-img-box">
+              <img src="ARALIE.jpeg" class="card-img-top" alt="Oshi 1">
+              <div class="member-badge">ARALIE</div>
+            </div>
+            <div class="card-body bg-dark text-white text-center p-4">
+              <h5 class="fw-bold text-danger mb-2">"Jangan Pernah Menyerah!"</h5>
+              <p class="card-text text-white-50 small">"Selamat atas kelulusannya! Dunia perkuliahan/sekolah sudah selesai, sekarang saatnya kamu bersinar lebih terang di panggung kehidupan yang baru!"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2 (Zee) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-member border-0 h-100 shadow">
+            <div class="member-img-box">
+              <img src="LEVI.jpeg" class="card-img-top" alt="Oshi 2">
+              <div class="member-badge">LEVI</div>
+            </div>
+            <div class="card-body bg-dark text-white text-center p-4">
+              <h5 class="fw-bold text-danger mb-2">"Terbangkan Pesawat Kertasmu"</h5>
+              <p class="card-text text-white-50 small">"Selamat wisuda ya! Ingat terus lagu Pesawat Kertas 365 Hari. Lipat mimpimu kuat-kuat, lalu terbangkan setinggi mungkin tanpa takut angin!"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3 (Gracia) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-member border-0 h-100 shadow">
+            <div class="member-img-box">
+              <img src="CHRISTI.jpeg" class="card-img-top" alt="Oshi 3">
+              <div class="member-badge">CHRISTY</div>
+            </div>
+            <div class="card-body bg-dark text-white text-center p-4">
+              <h5 class="fw-bold text-danger mb-2">"Senyumanmu Penuh Harapan"</h5>
+              <p class="card-text text-white-50 small">"Happy Graduation! Terima kasih sudah berjuang keras sampai titik ini. Selalu berikan senyuman terbaikmu untuk menyambut masa depan yang cerah!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Golden Quote Section -->
+  <section class="py-5 bg-black text-white text-center quote-section position-relative overflow-hidden">
+    <div class="container py-5 position-relative z-2">
+      <i class="bi bi-quote display-1 text-danger opacity-50"></i>
+      <h2 class="font-oswald display-5 fw-bold text-uppercase mb-3">"Impian ada di tengah peluh,<br>bagai bunga yang mekar secara perlahan"</h2>
+      <p class="lead text-jkt-gold mb-0">- Shonichi (Hari Pertama)</p>
+    </div>
+  </section>
+
+  <!-- Special Gift / Message From You -->
+  <section class="py-5 bg-light text-dark">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="p-5 rounded-4 shadow-lg bg-white border-top border-5 border-danger position-relative">
+            <div class="position-absolute top-0 start-50 translate-middle bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width:60px; height:60px;">
+              <i class="bi bi-heart-fill fs-4"></i>
+            </div>
+            <h3 class="fw-bold font-oswald mt-3 mb-4 text-uppercase">Surat Rahasia untuk Sang Juara</h3>
+            <!-- Tulis pesan pribadimu di sini -->
+            <p class="text-secondary fs-5 mb-4 italic">
+              "Selamat wisuda, Abang! Perjuangan ngerjain tugas akhir dan begadang akhirnya terbayar lunas hari ini. Semoga gelar barumu berkah, dan kamu bisa sesukses JKT48 yang selalu dicintai banyak orang. Jangan lupa buat terus dukung oshi kita juga ya setelah kerja nanti, hehe! <i>Proud of you!</i>"
+            </p>
+            <div class="fw-bold text-dark">- Dari Dede Bontot</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 border-top border-danger border-3">
+    <div class="container">
+      <p class="mb-1 fw-bold tracking-widest font-oswald text-uppercase text-white-50">DEDE BONTOT x JKT48 FANS</p>
+      <p class="small mb-0 text-muted">&copy; 2026 Segala Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Canvas Confetti & Logic JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Memulai efek konfeti otomatis saat web dibuka
+    window.onload = function() {
+      var duration = 5 * 1000;
+      var animationEnd = Date.now() + duration;
+      var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      var interval = setInterval(function() {
+        var timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
+        }
+
+        var particleCount = 50 * (timeLeft / duration);
+        // Konfeti warna Merah JKT48, Emas, dan Putih
+        confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#e11d48', '#fbbf24', '#ffffff'] }));
+        confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#e11d48', '#fbbf24', '#ffffff'] }));
+      }, 250);
+    };
+
+    // Fungsi Pemutar Musik BGM
+    function toggleMusic() {
+      var audio = document.getElementById("bgm");
+      var icon = document.getElementById("musicIcon");
+      var btn = document.getElementById("musicBtn");
+      
+      if (audio.paused) {
+        audio.play();
+        icon.className = "bi bi-pause-fill";
+        btn.classList.add("playing");
+      } else {
+        audio.pause();
+        icon.className = "bi bi-music-note-beamed";
+        btn.classList.remove("playing");
+      }
+    }
+  </script>
+</body>
+</html>

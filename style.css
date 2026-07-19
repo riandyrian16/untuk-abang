@@ -1,0 +1,165 @@
+/* Custom Global Style */
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.font-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.tracking-widest {
+    letter-spacing: 3px;
+}
+
+.tracking-wide {
+    letter-spacing: 1px;
+}
+
+/* JKT48 Colors & Gradients */
+.bg-jkt-dark {
+    background-color: #121212;
+}
+
+.text-jkt-gold {
+    color: #fbbf24;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+}
+
+.text-jkt-gradient {
+    background: linear-gradient(45deg, #ff4d4d, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-jkt-danger {
+    background-color: #e11d48;
+    color: #ffffff;
+    border: none;
+}
+.btn-jkt-danger:hover {
+    background-color: #be123c;
+    color: #ffffff;
+}
+
+.btn-jkt-lg {
+    background: linear-gradient(45deg, #e11d48, #be123c);
+    color: white;
+    border: 2px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(225, 29, 72, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-jkt-lg:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(225, 29, 72, 0.6);
+    color: #fbbf24;
+    border-color: #fbbf24;
+}
+
+/* Music Floating Button */
+#musicBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#musicBtn.playing {
+    animation: pulse 2s infinite;
+    background-color: #fbbf24;
+    color: black;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(251, 191, 36, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
+                url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200'); /* Ganti dengan BG Teater / Banner JKT48 jika punya */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.text-shadow {
+    text-shadow: 3px 3px 0px #e11d48, 6px 6px 0px rgba(0,0,0,0.4);
+}
+
+/* Section Decorator */
+.title-line {
+    width: 80px;
+    height: 4px;
+    background-color: #e11d48;
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+/* Member Cards */
+.card-member {
+    overflow: hidden;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+.member-img-box {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.member-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.member-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px 15px 10px 15px;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.card-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(225, 29, 72, 0.25) !important;
+}
+
+.card-member:hover .member-img-box img {
+    transform: scale(1.08);
+}
+
+/* Quote Section */
+.quote-section {
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
+                url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600');
+    background-size: cover;
+    background-position: center;
+}
